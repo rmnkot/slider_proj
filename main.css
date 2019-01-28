@@ -1,0 +1,142 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body>p {
+  width: 600px;
+}
+
+.slide-container {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  pointer-events: none;
+  width: 224px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.slider {
+  color: #61a5cf;
+  /* main color */
+  border: 2px solid currentColor;
+  /* currentColor represents here color style dependencies */
+  background-color: #ffffff;
+  border-radius: 7px;
+  width: 200px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 1.2em;
+  font-family: sans-serif;
+  position: relative;
+  pointer-events: auto;
+  outline: 10px solid transparent;
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: -webkit-transform 0.4s linear;
+  transition: transform 0.4s linear;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  will-change: transform;
+}
+
+.slider_active-js {
+  -webkit-transform: none;
+  transform: none;
+}
+
+.slider__icon {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.slider__text {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.slider__text_center {
+  margin-top: 0;
+}
+
+.slider__btn,
+.slider__btn_1 {
+  cursor: pointer;
+  color: currentColor;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+  text-align: center;
+  background-color: transparent;
+  outline: none;
+  padding: 16px;
+  font-size: inherit;
+  margin-top: 15px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider__link {
+  text-decoration: none;
+  text-align: center;
+}
+
+#slide-1 {
+  overflow: hidden;
+  height: 301.2px;
+  /* you have to manually adjust the height of the first slider depending on the amount of text */
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: -webkit-transform 0.4s linear;
+  transition: transform 0.4s linear;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+  will-change: transform;
+}
+
+.wrapper_up-js {
+  -webkit-transform: translateY(-115.5%);
+  transform: translateY(-115.5%);
+  /* you have to manually adjust this property of the first slider depending on the amount of text  */
+}
+
+.first {
+  height: 282.2px;
+  /* you have to manually adjust the height of the first slider's content container depending on the amount of text due to cross browser purpose*/
+}
+
+.slider__btn:hover,
+.slider__btn_1:hover {
+  background-color: currentColor;
+}
+
+.slider__btn:hover .btn_text,
+.slider__btn_1:hover .btn_text_1 {
+  color: #ffffff;
+}
+
+.slider__link:focus,
+.slider__link:active,
+.slider__link:visited {
+  color: currentColor;
+}
+
+.brake {
+  margin-top: 42px;
+}
